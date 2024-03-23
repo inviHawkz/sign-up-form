@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Norse Bold';
+    src: url(fonts/Norse-Bold.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vh;
+}
+
+body {
+    display: flex;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+.background {
+    background-image: url(imgs/background.jpg);
+    background-size: cover;
+    background-position: -60px;
+    width: 30vw;
+    height: 100vh;
+}
+
+.background div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.39);
+    height: 15%;
+    margin-top: 30%;
+    color: white;
+    font-family: 'Norse Bold';
+    font-size: 6.5rem;
+}
+
+.background div::before {
+    content: '';
+    height: 80%;
+    width: 5rem;
+    background-image: url(imgs/odin-lined.png);
+    background-size: cover;
+}
+
+.content {
+    width: 70vw;
+    height: 100vh;
+}
+
+.header,
+.footer {
+    background-color: #f4f4f4;
+    height: 33vh;
+    padding: 2rem 3rem;
+}
+
+.body {
+    height: 34vh;
+    box-shadow: 5px 5px 5px grey;
+    padding: 2rem 3rem 3rem 3rem;
+}
+
+.header div,
+.footer div {
+    padding-bottom: 1rem;
+}
+
+button {
+    font-weight: bold;
+    font-size: 2vh;
+    padding: 1vh 4vh;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #596D48;
+    color: white;
+    cursor: pointer;
+}
+
+label {
+    font-size: .7rem;
+    font-weight: bold;
+    color: #505050 ;
+    margin-top: 1rem;
+    display: block;
+}
+
+input {
+    border: 1px solid rgb(190, 189, 189);
+    border-radius: 3px;
+    padding: .4rem .4rem;
+    width: 20vw;
+}
+
+form {
+    display: flex;
+    gap: 3rem;
+}
+
+:invalid {
+    border-color: red;
+}
+
+:focus {
+    outline: none;
+    box-shadow: 3px 3px 3px #d8d7d7;
+}
+
+input:focus:valid {
+    border-color: blue;
+}
+
+.login {
+    font-weight: bold;
+    color: #596D48;
+    text-decoration: none;
+}
+
+.error::after {
+    content: '*Passwords do not match';
+    color: red;
+    font-size: .8rem;
+}
